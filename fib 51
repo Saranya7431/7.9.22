@@ -1,0 +1,37 @@
+#include<stdio.h>
+int	main()
+{
+	int	a,b,c;
+	int	i,n,sum=0,key,flag=0;
+	printf("enter	the	n	value");
+	scanf("%d",&n);
+	a=0;
+	b=1;
+	printf("%d\t%d\t",a,b);
+	for(i=0;i<=n;i++)
+	{
+		sum=a+b;
+		a=b;
+		b=sum;
+		printf("%d\t",sum);
+	}
+	printf("enter	the	vvalue	of	key");
+	scanf("%d",&key);
+	for(i=0;i<n;i++)
+	{
+	if(key==sum)
+	{
+		flag++;
+	}
+	}
+	if(flag==0)
+	{
+		printf("NO");
+		
+	}
+	else
+	{
+		printf("YES");
+	}
+	return	0;
+}
